@@ -75,11 +75,164 @@ newsales %>%
 newsales %>% 
   select(item_name, total_selling_price, month_number) %>% 
   group_by(item_name, month_number) %>% 
+  summarize(sales = (sum(total_selling_price))) %>%
+  arrange(desc(max))
+
+newsales %>% 
+  group_by(month_number, item_name) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
   summarize(sales = sum(total_selling_price)) %>% 
   arrange(desc(sales))
-  
-s
 
+## top 10 most sales per month
+
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 1) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange(desc(sales))
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 2) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange(desc(sales))
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 3) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange(desc(sales))
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 4) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange(desc(sales))
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 5) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange(desc(sales))
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 6) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange(desc(sales))
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 7) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange(desc(sales))
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 8) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange(desc(sales))
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 9) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange(desc(sales))
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 10) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange(desc(sales))
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 11) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange(desc(sales))
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 12) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange(desc(sales))
+
+## top 10 least sales per month
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 1) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange((sales))
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 2) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange((sales))
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 3) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange((sales))
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 4) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange((sales))
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 5) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange((sales))
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 6) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange((sales))
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 7) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange((sales))
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 8) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange((sales))
+
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 9) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange((sales))
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 10) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange((sales))
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 11) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange((sales))
+newsales %>% 
+  group_by(month_number, item_name) %>%
+  filter(month_number == 12) %>% 
+  select(item_name, total_selling_price, month_number) %>% 
+  summarize(sales = sum(total_selling_price)) %>% 
+  arrange((sales))
 
 
 
